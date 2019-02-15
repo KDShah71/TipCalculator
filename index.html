@@ -13,48 +13,54 @@
     <title>Tip Calculator</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container col-md-6">
       <div class="card">
         <div class="card-header">
           <h1>Tip Calculator</h1>
         </div>
         <div class="card-body">
           <h4>Hello world</h4>
-          <form action="">
-            <div class="form-group">
-              <label for="billAmount">How much was your bill?</label>
 
-              <input
-                type="text"
-                class="form-control"
-                id="tipAmount"
-                placeholder="Bill Amount"
-              />
-            </div>
-            <div class="form-group">
-              <label for="service">How was your service?</label>
-              <select name="" id="">
-                <option value="">Choose an Option</option>
-                <option value="">30%-Outstanding</option>
-                <option value="">20%-Good</option>
-                <option value="">15%-It was OK</option>
-                <option value="">10%-Bad</option>
-                <option value="">5%-Terrible</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="numOfPeople"
-                >How many people are sharing the bill?</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="tip"
-                placeholder="Number of People"
-              />
-            </div>
-            <button type="submit" class="btn btn-danger">Calculate</button>
-          </form>
+          <div class="form-group">
+            <label for="billAmount">How much was your bill?</label>
+
+            <input
+              type="text"
+              class="form-control"
+              id="billAmount"
+              placeholder="Bill Amount"
+            />
+          </div>
+          <div class="form-group">
+            <label for="service">How was your service?</label>
+            <select name="" id="tipPercent">
+              <option value="">Choose an Option</option>
+              <option value="30">30%-Outstanding</option>
+              <option value="20">20%-Good</option>
+              <option value="15">15%-It was OK</option>
+              <option value="10">10%-Bad</option>
+              <option value="5">5%-Terrible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="numOfPeople"
+              >How many people are sharing the bill?</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="numOfPeople"
+              placeholder="Number of People"
+            />
+          </div>
+          <div class="alert-success" id="result"></div>
+          <button
+            type="submit"
+            onClick="calculate()"
+            class="btn btn-lg btn-danger"
+          >
+            Calculate
+          </button>
         </div>
       </div>
     </div>
