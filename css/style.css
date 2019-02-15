@@ -1,0 +1,9 @@
+main-div {
+  position: absolute;
+}
+
+#second-div {
+  position: relative;
+  top: 3rem;
+  box-shadow: 10px 10px 15px grey;
+}
